@@ -49,9 +49,16 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
+  background-image: url('https://i.etsystatic.com/16895790/r/il/a289d9/4841007885/il_794xN.4841007885_potp.jpg');
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-color: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
+  background-blend-mode: lighten; /* Blend image with overlay */
   text-align: center;
+  padding: 20px;
 }
+
 
 .description h1 {
   font-size: 3em;
@@ -59,13 +66,14 @@ main {
 }
 
 .description p {
-  font-size: 1.2em;
+  font-size: 1.6em;
   padding: 20px; /* Add some space all around */
-  color: #555;
+  color: #000000;
 }
 
 
 /* Footer */
+
 footer {
   text-align: center;
   background-color: #333;
