@@ -87,16 +87,18 @@ footer {
 }
 
 .books-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  align-items: center;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Minimum size of 220px */
+  gap: 20px 20px; /* Ensure consistent spacing */
+  justify-items: center; /* Align items horizontally in their grid cells */
+  align-items: start; /* Align items to the top of their cells */
+  padding: 20px;
 }
 
 .book {
   flex: 1;
-  max-width: 250px;
+  width: 100%; /* Ensure books fill their grid column */
+  max-width: 210px; /* Optional: Restrict maximum size */
   margin: 5px;
   display: flex;
   flex-direction: column;
@@ -138,7 +140,7 @@ footer {
 /* Full-width screens (desktop) */
 @media (min-width: 441px) {
   .books-grid {
-      justify-content: space-between;
+      justify-content: space-around;
   }
 }
 
@@ -147,6 +149,7 @@ footer {
   .books-grid {
       flex-direction: column;
       align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   .book {
