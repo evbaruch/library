@@ -17,7 +17,7 @@ header {
 .navbar {
   display: flex;
   justify-content: center;
-  list-style: none;
+  list-style: none; /* Remove default list styling */
   margin: 0;
   padding: 0;
 }
@@ -36,44 +36,41 @@ header {
   text-decoration: underline;
 }
 
+/* Main Content */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Description Section */
-.description {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.upper_backgroud {
   background-image: url('https://i.etsystatic.com/16895790/r/il/a289d9/4841007885/il_794xN.4841007885_potp.jpg');
   background-size: cover; /* Ensure the image covers the entire section */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent tiling */
-  background-color: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
+  background-color: rgba(255, 255, 255, 0.7); /* White overlay with 80% opacity */
   background-blend-mode: lighten; /* Blend image with overlay */
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
 }
 
-
 .description h1 {
   font-size: 3em;
-  margin-bottom: 10px;
 }
 
 .description p {
   font-size: 1.6em;
-  padding: 20px; /* Add some space all around */
-  color: #000000;
+  color: #000;
 }
 
-
 /* Footer */
-
 footer {
   text-align: center;
   background-color: #333;
@@ -82,93 +79,79 @@ footer {
   margin-top: auto;
 }
 
-/* New Books Section */
-.new-books {
+
+/* Data section */
+.data {
   background-color: #fff;
   padding: 20px;
   text-align: center;
 }
 
-.new-books h2 {
+.data h2 {
   margin-bottom: 20px;
   font-size: 2em;
 }
 
-.books-grid {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Minimum size of 220px */
-  gap: 20px 20px; /* Ensure consistent spacing */
-  justify-items: center; /* Align items horizontally in their grid cells */
-  align-items: start; /* Align items to the top of their cells */
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
   padding: 20px;
 }
 
-.book {
-  flex: 1;
-  width: 100%; /* Ensure books fill their grid column */
-  max-width: 210px; /* Optional: Restrict maximum size */
+.box {
+  width: 100%;
   margin: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.book img {
+.box-small {
+  max-width: 210px;
+}
+
+.box-big {
+  grid-column: span 2; /* Spans 2 columns in the grid */
+  max-width: 100%; /* Ensures it uses the full available width */
+  max-height: 400px; /* Optional: Limit the height */
+}
+
+.box img {
   width: 100%;
   height: auto;
   max-height: 200px;
-  min-height: 100px;
   object-fit: cover;
   border-radius: 5px;
 }
 
-.book-info {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.book-info .author {
+.box-info .author {
   font-size: 1.1em;
   font-weight: bold;
   color: #333;
 }
 
-.book-info .genre {
+.box-info .genre {
   font-size: 0.9em;
   color: #555;
 }
 
+
 /* Responsive Design */
-
-/* Full-width screens (desktop) */
-@media (min-width: 441px) {
-  .books-grid {
-      justify-content: space-around;
-  }
-}
-
-/* Phone screens */
 @media (max-width: 440px) {
   .books-grid {
-      flex-direction: column;
-      align-items: center;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .book {
-      max-width: 90%;
+    max-width: 90%;
   }
 
-  .book-info .author {
-      font-size: 1em;
-  }
-
-  .book-info .genre {
-      font-size: 0.8em;
+  .box-big {
+    grid-column: span 1; /* Reverts to a single column on smaller screens */
   }
 }
