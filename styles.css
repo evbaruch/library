@@ -79,7 +79,6 @@ footer {
   margin-top: auto;
 }
 
-
 /* Data section */
 .data {
   background-color: #fff;
@@ -95,7 +94,7 @@ footer {
 .grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   justify-items: center;
   padding: 20px;
 }
@@ -109,24 +108,54 @@ footer {
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  overflow: hidden; /* Ensure content stays within the box */
 }
 
 .box-small {
-  max-width: 210px;
+  max-width: 280px;
 }
 
 .box-big {
   grid-column: span 2; /* Spans 2 columns in the grid */
-  max-width: 100%; /* Ensures it uses the full available width */
-  max-height: 400px; /* Optional: Limit the height */
+  width: 100%; /* Ensures it uses the full available width */
+  height: auto; /* Allow the height to grow based on content */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the element's total width/height */
 }
 
+/* For normal images */
 .box img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
+  width: 100%; /* Ensure the image fits the box's width */
+  max-height: 200px; /* Limit height for normal images */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 5px; /* Consistent styling */
+}
+
+/* For unique images on the "series" page */
+.box-big img {
+  width: 100%; /* Utilize the full width */
+  height: auto; /* Keep aspect ratio intact */
+  object-fit: contain; /* Show the whole image */
+}
+
+.box-info {
+  padding: 10px; /* Add some spacing around the text */
+  word-wrap: break-word; /* Allow long words to break into the next line */
+}
+
+.box-info p {
+  margin: 5px 0; /* Add spacing between paragraphs */
+  text-overflow: ellipsis; /* Add ellipsis if the text overflows */
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent text wrapping for single-line elements */
+}
+
+.box-big .box-info {
+  white-space: normal; /* Allow multi-line text in big boxes */
+}
+
+.box-big .box-info p {
+  text-overflow: clip; /* Show full text for unique images */
 }
 
 .box-info .author {
@@ -140,6 +169,10 @@ footer {
   color: #555;
 }
 
+/* Ensure hidden-content is not displayed in .box-big */
+.box-big .hidden-content {
+  display: none;
+}
 
 /* Responsive Design */
 @media (max-width: 440px) {
