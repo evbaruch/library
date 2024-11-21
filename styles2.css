@@ -1,0 +1,120 @@
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+
+  .data h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+
+  .description h1 {
+    font-size: 3em;
+  }
+  
+  .description p {
+    font-size: 1.6em;
+    color: #000;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+  
+  
+  /* Data section */
+  .data {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .grid {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+    padding: 20px;
+  }
+  
+  .box {
+    width: 100%;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .box .box-header {
+    display: flex;
+  }
+  
+  .box-medium {
+    max-width: 800px;   
+  }
+
+    .toggle-checkbox {
+    display: none;
+  }
+
+.hidden-content {
+    display: none;
+  }
+
+  /* Show hidden content when checkbox is checked */
+.toggle-checkbox:checked ~ .hidden-content {
+    display: block;
+    margin-top: 10px;
+}
+  
+  .box img {
+    width: 130px;
+    height: auto;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .box .summary {
+    font-size: 1.3em;
+    color: #333;
+  }
+
+  .hidden-content .expansion {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.hidden-content .author {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.hidden-content .genre {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.box-medium:hover {
+    background-color: #f0eded;
+}
