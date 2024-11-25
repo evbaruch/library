@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Glossary-specific styling */
+        .glossary-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .glossary-section details {
+            margin-bottom: 15px;
+        }
+
+        .glossary-section summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #007BFF;
+        }
+
+        .glossary-section summary:hover {
+            text-decoration: underline;
+        }
+
+        .glossary-entry {
+            padding: 10px 20px;
+            background-color: #fff;
+            border-left: 4px solid #007BFF;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h1>About This Project</h1>
+            <p>
+                Welcome to the About page! Here you'll find detailed explanations,
+                organized tables, and references. Each section is linked for easy
+                navigation.
+            </p>
+        </section>
+
+        <section id="glossary" class="glossary-section">
+            <h1>Glossary</h1>
+            <p>Explore terms and concepts from *The Eye of the World*:</p>
+
+            <details>
+                <summary>Aes Sedai</summary>
+                <div class="glossary-entry">
+                    <p>
+                        Wielders of the One Power. Since the Time of Madness, all surviving
+                        Aes Sedai are women. Widely distrusted and feared, even hated, they are blamed by
+                        many for the Breaking of the World. At the same time, few rulers will be without
+                        an Aes Sedai advisor.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Ajah</summary>
+                <div class="glossary-entry">
+                    <p>
+                        Societies among the Aes Sedai, to which all Aes Sedai belong. They are
+                        designated by colors, such as Blue Ajah and Red Ajah, each following a specific
+                        philosophy of the One Power.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Rand al'Thor</summary>
+                <div class="glossary-entry">
+                    <p>
+                        A young farmer and sheepherder from the Two Rivers. He becomes one of the
+                        central characters of *The Wheel of Time* series.
+                    </p>
+                </div>
+            </details>
+
+            <!-- Add more glossary entries as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

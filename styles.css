@@ -188,35 +188,3 @@ footer {
     grid-column: span 1; /* Reverts to a single column on smaller screens */
   }
 }
-
-
-
-/* Highlight active nav link */
-nav ul li a.active {
-  font-weight: bold;
-  color: #007BFF; /* Example color */
-}
-
-/* Responsive table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-table th {
-  background-color: #f4f4f4;
-}
-
-/* Section spacing
-section {
-  margin: 20px auto;
-  padding: 10px;
-  max-width: 800px;
-} */
