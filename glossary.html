@@ -1,108 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Glossary-specific styling */
-        .glossary-section {
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 20px auto;
-            max-width: 800px;
-        }
-
-        .glossary-section details {
-            margin-bottom: 15px;
-        }
-
-        .glossary-section summary {
-            font-weight: bold;
-            cursor: pointer;
-            color: #007BFF;
-        }
-
-        .glossary-section summary:hover {
-            text-decoration: underline;
-        }
-
-        .glossary-entry {
-            padding: 10px 20px;
-            background-color: #fff;
-            border-left: 4px solid #007BFF;
-            border-radius: 4px;
-            margin-top: 5px;
-        }
-    </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glossary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="intro">
-            <h1>About This Project</h1>
+      <section id="intro">
+        <h1>About This Project</h1>
+        <p>
+          Welcome to the About page! Here you'll find detailed explanations,
+          organized tables, and references. Each section is linked for easy
+          navigation.
+        </p>
+      </section>
+
+      <section>
+        <h1>Glossary</h1>
+        <p>Explore terms and concepts from *The Eye of the World*:</p>
+
+        <details>
+          <summary>Aes Sedai</summary>
+          <div>
             <p>
-                Welcome to the About page! Here you'll find detailed explanations,
-                organized tables, and references. Each section is linked for easy
-                navigation.
+              Wielders of the One Power. Since the Time of Madness, all
+              surviving Aes Sedai are women. Widely distrusted and feared, even
+              hated, they are blamed by many for the Breaking of the World. At
+              the same time, few rulers will be without an Aes Sedai advisor.
             </p>
-        </section>
+          </div>
+        </details>
 
-        <section id="glossary" class="glossary-section">
-            <h1>Glossary</h1>
-            <p>Explore terms and concepts from *The Eye of the World*:</p>
+        <details>
+          <summary>Ajah</summary>
+          <div>
+            <p>
+              Societies among the Aes Sedai, to which all Aes Sedai belong. They
+              are designated by colors, such as Blue Ajah and Red Ajah, each
+              following a specific philosophy of the One Power.
+            </p>
+          </div>
+        </details>
 
-            <details>
-                <summary>Aes Sedai</summary>
-                <div class="glossary-entry">
-                    <p>
-                        Wielders of the One Power. Since the Time of Madness, all surviving
-                        Aes Sedai are women. Widely distrusted and feared, even hated, they are blamed by
-                        many for the Breaking of the World. At the same time, few rulers will be without
-                        an Aes Sedai advisor.
-                    </p>
-                </div>
-            </details>
+        <details>
+          <summary>Rand al'Thor</summary>
+          <div>
+            <p>
+              A young farmer and sheepherder from the Two Rivers. He becomes one
+              of the central characters of *The Wheel of Time* series.
+            </p>
+          </div>
+        </details>
 
-            <details>
-                <summary>Ajah</summary>
-                <div class="glossary-entry">
-                    <p>
-                        Societies among the Aes Sedai, to which all Aes Sedai belong. They are
-                        designated by colors, such as Blue Ajah and Red Ajah, each following a specific
-                        philosophy of the One Power.
-                    </p>
-                </div>
-            </details>
-
-            <details>
-                <summary>Rand al'Thor</summary>
-                <div class="glossary-entry">
-                    <p>
-                        A young farmer and sheepherder from the Two Rivers. He becomes one of the
-                        central characters of *The Wheel of Time* series.
-                    </p>
-                </div>
-            </details>
-
-            <!-- Add more glossary entries as needed -->
-        </section>
+        <details>
+          <summary>
+            Adan, Heran (ay- <strong>DAHN</strong>, <strong>HEH</strong>-ran)
+          </summary>
+          Governor of Baerlon.
+        </details>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 My Project. All rights reserved.</p>
+      <p>&copy; 2024 My Project. All rights reserved.</p>
     </footer>
-</body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Fetch the glossary data from the updated text file
+        fetch("glossery.txt")
+          .then((response) => response.text())
+          .then((data) => {
+            // Parse the fetched text into an HTML document
+            const parser = new DOMParser();
+            const glossaryDoc = parser.parseFromString(data, "text/html");
+
+            // Extract terms and definitions
+            const terms = glossaryDoc.querySelectorAll("dt");
+            const definitions = glossaryDoc.querySelectorAll("dd");
+
+            // Locate the glossary section in the HTML
+            const glossarySection = document.querySelector(
+              "main section:nth-of-type(2)"
+            );
+
+            // Clear existing content in the glossary section
+            glossarySection.innerHTML = `
+          <h1>Glossary</h1>
+          <p>Explore terms and concepts from *The Eye of the World*:</p>
+      `;
+
+            // Process terms and their associated definitions
+            let currentTerm = null;
+            let currentDefinitions = [];
+
+            terms.forEach((term, index) => {
+              // Flush the previous term and its definitions
+              if (currentTerm && currentDefinitions.length) {
+                const details = document.createElement("details");
+                const summary = document.createElement("summary");
+                summary.innerHTML = currentTerm;
+                details.appendChild(summary);
+
+                currentDefinitions.forEach((definition) => {
+                  const div = document.createElement("div");
+                  div.innerHTML = definition;
+                  details.appendChild(div);
+                });
+
+                glossarySection.appendChild(details);
+              }
+
+              // Start a new term group
+              currentTerm = term.innerHTML;
+              currentDefinitions = [];
+
+              // Collect associated `<dd>` elements
+              let nextSibling = term.nextElementSibling;
+              while (nextSibling && nextSibling.tagName === "DD") {
+                currentDefinitions.push(nextSibling.innerHTML);
+                nextSibling = nextSibling.nextElementSibling;
+              }
+            });
+
+            // Flush the last term group
+            if (currentTerm && currentDefinitions.length) {
+              const details = document.createElement("details");
+              const summary = document.createElement("summary");
+              summary.innerHTML = currentTerm;
+              details.appendChild(summary);
+
+              currentDefinitions.forEach((definition) => {
+                const div = document.createElement("div");
+                div.innerHTML = definition;
+                details.appendChild(div);
+              });
+
+              glossarySection.appendChild(details);
+            }
+          })
+          .catch((error) => console.error("Error loading glossary:", error));
+      });
+    </script>
+  </body>
 </html>
