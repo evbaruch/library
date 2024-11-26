@@ -12,7 +12,6 @@
         <ul class="navbar">
           <li><a href="index.html">Home</a></li>
           <li><a href="catalog.html">Catalog</a></li>
-          <li><a href="about.html" class="active">About</a></li>
         </ul>
       </nav>
     </header>
@@ -79,6 +78,9 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // Base URL to prepend
+        const baseUrl = "https://wot.fandom.com";
+
         // Fetch the glossary data from the updated text file
         fetch("glossery.txt")
           .then((response) => response.text())
@@ -102,54 +104,74 @@
           <p>Explore terms and concepts from *The Eye of the World*:</p>
       `;
 
-            // Process terms and their associated definitions
-            let currentTerm = null;
-            let currentDefinitions = [];
+            // Initialize a map to group terms by their starting letter
+            const glossaryMap = {};
 
             terms.forEach((term, index) => {
-              // Flush the previous term and its definitions
-              if (currentTerm && currentDefinitions.length) {
-                const details = document.createElement("details");
-                const summary = document.createElement("summary");
-                summary.innerHTML = currentTerm;
-                details.appendChild(summary);
+              // Extract the first letter of the term
+              const firstLetter = term.textContent.trim()[0].toUpperCase();
 
-                currentDefinitions.forEach((definition) => {
-                  const div = document.createElement("div");
-                  div.innerHTML = definition;
-                  details.appendChild(div);
-                });
-
-                glossarySection.appendChild(details);
+              // Initialize the group for this letter if it doesn't exist
+              if (!glossaryMap[firstLetter]) {
+                glossaryMap[firstLetter] = [];
               }
 
-              // Start a new term group
-              currentTerm = term.innerHTML;
-              currentDefinitions = [];
-
-              // Collect associated `<dd>` elements
+              // Collect the term and its associated definitions
+              let currentDefinitions = [];
               let nextSibling = term.nextElementSibling;
+
               while (nextSibling && nextSibling.tagName === "DD") {
                 currentDefinitions.push(nextSibling.innerHTML);
                 nextSibling = nextSibling.nextElementSibling;
               }
+
+              // Add the term and definitions to the group
+              glossaryMap[firstLetter].push({
+                term: term.innerHTML,
+                definitions: currentDefinitions,
+              });
             });
 
-            // Flush the last term group
-            if (currentTerm && currentDefinitions.length) {
-              const details = document.createElement("details");
-              const summary = document.createElement("summary");
-              summary.innerHTML = currentTerm;
-              details.appendChild(summary);
+            // Render the grouped terms and definitions into the glossary section
+            Object.entries(glossaryMap)
+              .sort(([a], [b]) => a.localeCompare(b)) // Sort the letters alphabetically
+              .forEach(([letter, entries]) => {
+                // Create a header for each letter
+                const letterHeader = document.createElement("h2");
+                letterHeader.textContent = letter;
+                glossarySection.appendChild(letterHeader);
 
-              currentDefinitions.forEach((definition) => {
-                const div = document.createElement("div");
-                div.innerHTML = definition;
-                details.appendChild(div);
+                // Add the terms and definitions under this letter
+                entries.forEach(({ term, definitions }) => {
+                  const details = document.createElement("details");
+                  const summary = document.createElement("summary");
+
+                  // Update links inside the term
+                  const termElement = document.createElement("div");
+                  termElement.innerHTML = term;
+                  termElement.querySelectorAll("a").forEach((link) => {
+                    if (!link.href.startsWith(baseUrl)) {
+                      link.href = baseUrl + link.getAttribute("href");
+                    }
+                  });
+                  summary.innerHTML = termElement.innerHTML;
+                  details.appendChild(summary);
+
+                  // Update links inside definitions
+                  definitions.forEach((definition) => {
+                    const div = document.createElement("div");
+                    div.innerHTML = definition;
+                    div.querySelectorAll("a").forEach((link) => {
+                      if (!link.href.startsWith(baseUrl)) {
+                        link.href = baseUrl + link.getAttribute("href");
+                      }
+                    });
+                    details.appendChild(div);
+                  });
+
+                  glossarySection.appendChild(details);
+                });
               });
-
-              glossarySection.appendChild(details);
-            }
           })
           .catch((error) => console.error("Error loading glossary:", error));
       });

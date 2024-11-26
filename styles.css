@@ -188,3 +188,215 @@ footer {
     grid-column: span 1; /* Reverts to a single column on smaller screens */
   }
 }
+
+/* Table Styling */
+table {
+  width: 90%; /* Slightly reduced width for better centering */
+  border-collapse: separate; /* Allow distinct borders */
+  border-spacing: 0; /* Remove gaps between cells */
+  margin: 20px auto; /* Center the table */
+  background-color: #fdfdfd; /* Slightly off-white background */
+  border: 1px solid #ddd; /* Subtle border for the entire table */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow for emphasis */
+  overflow: hidden;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd; /* Horizontal lines */
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Arial', sans-serif;
+  color: #555; /* Softer text color for contrast */
+}
+
+th {
+  background-color: #f0f0f0; /* Light gray background for headers */
+  color: #333; /* Darker text color */
+  font-weight: 600; /* Enhance visibility */
+  text-transform: uppercase; /* Consistent with header styling */
+}
+
+td {
+  background-color: #fff; /* Clean white cells */
+}
+
+tr:nth-child(even) td {
+  background-color: #f7f7f7; /* Subtle alternating row color */
+}
+
+tr:hover td {
+  background-color: #f0fbff; /* Light blue highlight for the row */
+  color: #222; /* Slightly darker text for hover contrast */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
+}
+
+/* Enhanced Borders */
+th:first-child,
+td:first-child {
+  border-left: 1px solid #ddd; /* Stronger left border for the first column */
+}
+
+th:last-child,
+td:last-child {
+  border-right: 1px solid #ddd; /* Stronger right border for the last column */
+}
+
+/* Mobile-Friendly Styling */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevent wrapping */
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 12px 10px; /* Slightly reduced padding */
+  }
+}
+
+@media (max-width: 480px) {
+  th, td {
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+}
+
+
+/* Grid Layout for Details */
+.details-grid {
+  display: grid;
+  gap: 20px; /* Space between items */
+  grid-template-columns:  repeat(auto-fit, 45%);
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Grid Layout for Details */
+.details-grid-in {
+  display: grid;
+  gap: 20px 60px; /* Space between items */
+  grid-template-columns: repeat(auto-fit, minmax(219px, 1fr));
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Details Styling */
+details {
+  cursor: pointer; /* Pointer cursor for interactivity */
+  width: 100%; /* Default width for details in the grid */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Add some padding for better readability */
+  background-color: #ffffff; /* Clean white background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left; /* Align content to the left for readability */
+  overflow: hidden; /* Ensure content fits nicely */
+  transition: all 0.3s ease; /* Smooth hover and expand effects */
+  grid-column: span 1; /* Default to single-column span */
+  /*the right side is too close to the edge of the screen, to make it look better, we add some margin*/
+}
+
+/* details items wiil be centered */
+details > * {
+  margin: 0 10px;
+}
+
+details:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Elevate on hover */
+  transform: translateY(-4px); /* Slight upward movement */
+}
+
+/* Expanded Details */
+details[open] {
+  grid-column: span 2; /* Make the element span across all columns */
+  width: 97%; /* Expand to full viewport width */
+  background-color: #f7f7f7; /* Highlight the opened details */
+  z-index: 10; /* Bring it above other elements */
+}
+
+/* Remove the default arrow of <details> */
+details summary {
+  list-style: none; /* Remove bullet/arrow */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* Hide default arrow for webkit-based browsers */
+}
+
+details summary {
+  font-size: 1.2em; /* Larger text for emphasis */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Inner Content */
+details div {
+  font-size: 1em;
+  color: #555; /* Subtle text color for body content */
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  details {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  details[open] {
+    padding: 15px;
+    width: 97%; /* Slightly reduced width for better readability */
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .details-grid
+  {
+    grid-template-columns:  repeat(auto-fit, 90%);
+    justify-content: center;
+  }
+
+  .details-grid-in
+  {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+
+  details[open] {
+    width: 97%; /* Slightly reduced width for better readability */
+    justify-content: center;
+  }
+  
+}
+
+@media screen and (max-width: 970px) {
+  .details-grid-in
+  {
+    grid-template-columns:  repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+  }
+
+  details[open] {
+    width: 97%; /* Slightly reduced width for better readability */
+  }
+  
+}
+
+@media (min-width: 970px) {
+  .details-grid
+  {
+    grid-template-columns:  repeat(auto-fit, 47%);
+    justify-content: space-around;
+  }
+
+  details[open] {
+    width: 97%; /* Slightly reduced width for better readability */
+  }
+
+}
