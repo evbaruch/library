@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to a CSS file -->
+
+
+    <link rel="stylesheet" href="styles2.css"> <!-- Link to a CSS file -->
+
 </head>
 <body>
     <header>
@@ -14,9 +17,6 @@
               <a href="./catalog.html">Catalog</a>
             </li>
             <li>
-              <a href="./series.html">Series</a>
-            </li>
-            <li>
               <a href="./glossary_real.html">Glossary</a>
             </li>
           </ul>
@@ -24,45 +24,47 @@
     </header>
     <main>
         <div class="grid">         
-            <div class="box box-medium">
-                <input type="checkbox" id="toggle-details-1" class="toggle-checkbox">
-                <label for="toggle-details-1" class="box-header">
-                    <img src="https://www.brandonsanderson.com/cdn/shop/files/2.png?v=1722015641&width=840" alt="Book 1"/>
-                    <p class="summary">To To achieve the desired <br>  functionality where only the <br> image and summary </p>
-                </label>
-                <div class="hidden-content">
-                    <p class="expansion">To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the  To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: initial styling and JavaScript for toggling visibility. Here's how you can do it:</p>
-                    <p class="author">Brandon Sanderson</p>
-                    <p class="genre">Fantasy</p>
-                </div>
+            <div class="box box-medium" style="--background-image: url('https://www.brandonsanderson.com/cdn/shop/files/2.png?v=1722015641&width=840')">
+                <details>
+                    <summary class="box-header">
+                        <img src="https://www.brandonsanderson.com/cdn/shop/files/2.png?v=1722015641&width=840" alt="Book 1"/>
+                        <p class="summary">To To achieve the desired <br>  functionality where only the <br> image and summary </p>
+                    </summary>
+                    <div class="box-details">
+                        <p class="expansion">To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the  To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: initial styling and JavaScript for toggling visibility. Here's how you can do it:</p>
+                        <p class="author">Brandon Sanderson</p>
+                        <p class="genre">Fantasy</p>
+                    </div>
+                </details>
             </div>
 
-            <div class="box box-medium">
-                <input type="checkbox" id="toggle-details-2" class="toggle-checkbox">
-                <label for="toggle-details-2" class="box-header">
-                    <img src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_18.png?v=1722041987&width=840" alt="Book 2"/>
-                    <p class="summary">To To achieve the desired <br>  functionality where only the <br> image and summary </p>
-                </label>
-                <div class="hidden-content">
-                    <p class="expansion">Praesent To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the  To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: initial styling and JavaScript for toggling visibility. Here's how you can do it: et consectetur lorem. Aenean condimentum elit nec metus hendrerit, eget tincidunt augue pharetra.</p>
-                    <p class="author">Brandon Sanderson</p>
-                    <p class="genre">Fantasy</p>
-                </div>
+            <div class="box box-medium" style="--background-image: url('https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_18.png?v=1722041987&width=840')">
+                <details>
+                    <summary class="box-header">
+                        <img src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_18.png?v=1722041987&width=840" alt="Book 1"/>
+                        <p class="summary">To To achieve the desired <br>  functionality where only the <br> image and summary </p>
+                    </summary>
+                    <div class="box-details">
+                        <p class="expansion">To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the  To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: initial styling and JavaScript for toggling visibility. Here's how you can do it:</p>
+                        <p class="author">Brandon Sanderson</p>
+                        <p class="genre">Fantasy</p>
+                    </div>
+                </details>
             </div>
 
-            <div class="box box-medium">
-                <input type="checkbox" id="toggle-details-3" class="toggle-checkbox">
-                <label for="toggle-details-3" class="box-header">
-                    <img src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_19.png?v=1722041986&width=840" alt="Book 3"/>
-                    <p class="summary">To To achieve the desired <br>  functionality where only the <br> image and summary </p>
-                </label>
-                <div class="hidden-content">
-                    <p class="expansion">Praesent et consectetur lorem. Aenean To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the  To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: initial styling and JavaScript for toggling visibility. Here's how you can do it: condimentum elit nec metus hendrerit, eget tincidunt augue pharetra.</p>
-                    <p class="author">Brandon Sanderson</p>
-                    <p class="genre">Fantasy</p>
-                </div>
+            <div class="box box-medium" style="--background-image: url('https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_19.png?v=1722041986&width=840')">
+                <details>
+                    <summary class="box-header">
+                        <img src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_19.png?v=1722041986&width=840" alt="Book 1"/>
+                        <p class="summary">To To achieve the desired <br>  functionality where only the <br> image and summary </p>
+                    </summary>
+                    <div class="box-details">
+                        <p class="expansion">To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the  To achieve the desired functionality where only the image and summary are initially visible, and clicking on the box reveals the full details, you can use a combination of CSS for the initial styling and JavaScript for toggling visibility. Here's how you can do it: initial styling and JavaScript for toggling visibility. Here's how you can do it:</p>
+                        <p class="author">Brandon Sanderson</p>
+                        <p class="genre">Fantasy</p>
+                    </div>
+                </details>
             </div>
-
         </div>
         
 
