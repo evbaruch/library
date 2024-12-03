@@ -62,14 +62,31 @@
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+
+
   }
 
   .box .box-header {
     display: flex;
+
+
+  }
+
+
+
+  .box-details{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
   }
   
   .box-medium {
-    max-width: 800px;   
+    max-width: 1000px;
+    background-image: var(--background-image);
+    background-blend-mode: lighten;
+    background-size: 200%;
+    background-position: center -220px;
+    background-color: rgba(255, 255, 255, 0.3);
+
   }
 
   .toggle-checkbox {
@@ -92,29 +109,35 @@
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
+    
   }
 
   .box .summary {
-    font-size: 1.3em;
-    color: #333;
+
+    color: white; /* Text color */
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adds shadow for readability */
+    padding: 10px; /* Optional padding */
   }
 
-  .hidden-content .expansion {
-    font-size: 1.3em;
-    color: #333;
-}
-
-.hidden-content .author {
+  .box-details .expansion {
     font-size: 1.1em;
+    padding: 10px; /* Optional padding */
+    color: #333;
+ }
+
+.box-details .author {
+    font-size: 1.3em;
     font-weight: bold;
     color: #333;
 }
 
-.hidden-content .genre {
+.box-details .genre {
     font-size: 0.9em;
+    padding: 10px; /* Optional padding */
     color: #555;
 }
 
 .box-medium:hover {
-    background-color: #f0eded;
+  background-color: rgba(255, 255, 255, 0.7);
 }
