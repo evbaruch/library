@@ -1,0 +1,92 @@
+  .grid {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+    padding: 20px;
+  }
+  
+  .box-medium {
+    max-width: 1000px;
+    background-image: var(--background-image);
+    background-blend-mode: lighten;
+    background-size: 100%;
+    background-position: top center;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media screen and (max-width: 600px) {
+    .box-medium {
+      max-width: 1000px;
+      background-image: var(--background-image);
+      background-blend-mode: lighten;
+      background-size: 200%;
+      background-position: top center;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  .box-details{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+  }
+  
+
+  .box-series {
+    position: relative;
+    max-width: 1000px; /* Set a fixed width for consistency */
+    height: 150px; /* Explicit height to match max-height */
+    overflow: hidden; /* Prevents content (like the image) from overflowing the box */
+    background-color:#333;
+  }
+
+  .box-series img {
+    width: 100%; /* Ensures the image scales proportionally to the container width */
+    height: 100%; /* Matches the height of the container */
+    object-fit: cover; /* Maintains aspect ratio and fills the container */
+    display: block; /* Removes inline spacing below the image */
+    border-radius: 8px;
+  }
+
+  .box-header .summary {
+
+    color: white; /* Text color */
+    font-size: 1.3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adds shadow for readability */
+    padding: 10px; /* Optional padding */
+  }
+
+  .box-details .expansion {
+    font-size: 1.1em;
+    padding: 10px; /* Optional padding */
+    color: #333;
+  }
+
+ .box-details .author {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .box-details .genre {
+    font-size: 0.9em;
+    padding: 10px; /* Optional padding */
+    color: #555;
+  }
+
+  .box-series .series {
+    position: absolute;
+    bottom: 10px; /* Adjust the position from the bottom of the image */
+    left: 10px; /* Adjust the position from the left side */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Add some padding */
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 5px; /* Optional: add rounded corners */
+  }
+
+.box-medium:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.box-series:hover {
+  height: 100%;
+}
