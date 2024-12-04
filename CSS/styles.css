@@ -73,15 +73,7 @@ footer a:hover {
   text-decoration: underline; /* Underline links on hover */
 }
 
-/* ======================================== */
-/*               Main Content               */
-/* ======================================== */
 
-main {
-  flex: 1; /* Allow the main content to expand and fill available space */
-  display: flex; /* Optional: add layout for main */
-  flex-direction: column; /* Stack items in the main section */
-}
 
 /* ======================================== */
 /*        Upper Background Image            */
@@ -93,6 +85,7 @@ main {
   background-repeat: no-repeat; /* Prevent the background from tiling */
   background-color: rgba(255, 255, 255, 0.7); /* Add a white overlay with 70% opacity */
   background-blend-mode: lighten; /* Blend the overlay with the image */
+  background-image: var(--background-image);
 }
 
 /* ======================================== */
@@ -257,20 +250,6 @@ main {
   .video-item {
     width: 100%; /* Single video per row on smaller screens */
   }
-}
-
-
-
-/* ======================================== */
-/*            TODO: DELETE SECTION          */
-/* ======================================== */
-
-.grid {
-  display: grid; /* Use grid layout for the section */
-  gap: 20px; /* Add space between grid items */
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); /* Define responsive columns */
-  justify-items: center; /* Center-align grid items */
-  padding: 20px; /* Add padding around the grid */
 }
 
 
