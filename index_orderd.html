@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Home</title>
+    <link rel="stylesheet" href="styles_ordered.css" type="text/css" />
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
@@ -30,259 +31,348 @@
 
       <section class="data">
         <h2>New</h2>
-        <div class="grid">
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/2.png?v=1722015641&width=840"
-              alt="Book 1"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Fantasy</p>
+        <div class="slider">
+          <!-- Radio Buttons -->
+          <input type="radio" name="slider" id="slide1" checked style="visibility: hidden;" />
+          <input type="radio" name="slider" id="slide2" style="visibility: hidden;"/>
+          <input type="radio" name="slider" id="slide3" style="visibility: hidden;"/>
+          <input type="radio" name="slider" id="slide4" style="visibility: hidden;"/>
+          <input type="radio" name="slider" id="slide5" style="visibility: hidden;"/>
+          <input type="radio" name="slider" id="slide6" style="visibility: hidden;"/>
+          <input type="radio" name="slider" id="slide7" style="visibility: hidden;"/>
+          <input type="radio" name="slider" id="slide8" style="visibility: hidden;"/>
+
+          <!-- Slides -->
+          <div id="slides">
+            <div id="overflow">
+              <div class="inner">
+                <!-- Slide 1 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/2.png?v=1722015641&width=840"
+                      alt="Book 1"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Fantasy</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_18.png?v=1722041987&width=840"
+                      alt="Book 2"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Science Fiction</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_19.png?v=1722041986&width=840"
+                      alt="Book 3"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Epic Fantasy</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_20.png?v=1722041986&width=840"
+                      alt="Book 4"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Fantasy</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_21.png?v=1722041986&width=840"
+                      alt="Book 5"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Science Fiction</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_22.png?v=1722041986&width=840"
+                      alt="Book 6"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Epic Fantasy</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_23.png?v=1722041986&width=840"
+                      alt="Book 7"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Fantasy</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="slide">
+                  <div class="box box-small">
+                    <img
+                      src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_24.png?v=1722041986&width=840"
+                      alt="Book 8"
+                    />
+                    <div class="box-info">
+                      <p class="author">Brandon Sanderson</p>
+                      <p class="genre">Science Fiction</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_18.png?v=1722041987&width=840"
-              alt="Book 2"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Science Fiction</p>
-            </div>
+
+          <!-- Controls -->
+          <div id="controls">
+            <label for="slide1" class="prev"></label>
+            <label for="slide2" class="next"></label>
+            <label for="slide3" class="next"></label>
+            <label for="slide4" class="next"></label>
+            <label for="slide5" class="next"></label>
+            <label for="slide6" class="next"></label>
+            <label for="slide7" class="next"></label>
+            <label for="slide8" class="next"></label>
           </div>
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_19.png?v=1722041986&width=840"
-              alt="Book 3"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Epic Fantasy</p>
-            </div>
-          </div>
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_20.png?v=1722041986&width=840"
-              alt="Book 4"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Fantasy</p>
-            </div>
-          </div>
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_21.png?v=1722041986&width=840"
-              alt="Book 5"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Science Fiction</p>
-            </div>
-          </div>
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_22.png?v=1722041986&width=840"
-              alt="Book 6"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Epic Fantasy</p>
-            </div>
-          </div>
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_23.png?v=1722041986&width=840"
-              alt="Book 7"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Fantasy</p>
-            </div>
-          </div>
-          <div class="box box-small">
-            <img
-              src="https://www.brandonsanderson.com/cdn/shop/files/Untitled_design_24.png?v=1722041986&width=840"
-              alt="Book 8"
-            />
-            <div class="box-info">
-              <p class="author">Brandon Sanderson</p>
-              <p class="genre">Science Fiction</p>
-            </div>
+
+          <!-- Bullets -->
+          <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
           </div>
         </div>
-      </section>
-      <h2>Art Gallery</h2>
-      <section class="art_gallery">
-        <div class="gallery-item large">
-          <img
-            src="https://nathanbweller.com/wp-content/uploads/2024/04/wot-tar-valon-980x551.webp"
-            alt="Large Image"
-          />
-          <img
-            src="https://nathanbweller.com/wp-content/uploads/2023/11/choeden-kal-980x560.jpg"
-            alt="Medium Image"
-          />
-          <img
-            src="https://nathanbweller.com/wp-content/uploads/2023/11/wot-age-of-legends-opening-bore-monsters-1-980x560.jpg"
-            alt="Medium Image"
-          />
 
-          <img
-            src="https://i.pinimg.com/originals/17/19/b1/1719b1aeaba4b866d56678413e71f551.png"
-            alt="Standard Image"
-          />
-          <img
-            src="https://reactormag.com/wp-content/uploads/2016/08/WoK-wallpaper-800x600-740x555.jpg"
-            alt="Standard Image"
-          />
-
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/5653e2db9bd854730a335e509206b091.webp?ci_seal=f062616d64&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
-
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/f8d8ce536e33c6207bfe08549a699a77.webp?ci_seal=e855ac176d&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
-
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/2db4fea5c970e4c6cb6506f904086555.webp?ci_seal=4eaf8ae76b&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
-
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/08529d2cfd88e9e0404a51f1eb0fa30a.jpeg?ci_seal=65a0e6613d&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
-
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/bb7571ee7eb98610a9bb90b88ded677a.webp?ci_seal=6dcd04e224&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
-
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/f553dbf9f14bf9aea845ffb64d5c75f3.webp?ci_seal=f779c28000&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+        <h2>Video Gallery</h2>
+        <div class="video-gallery">
+          <div class="video-item">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/0mC8dsQJK7w?si=loRT_TSSCBzhuySl"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/mIztVGeyIa4?si=KS74lKBsvvgkPqGg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
+        <h2>Art Gallery</h2>
+        <section class="art_gallery">
+          <div class="gallery-item large">
+            <img
+              src="https://nathanbweller.com/wp-content/uploads/2024/04/wot-tar-valon-980x551.webp"
+              alt="Large Image"
+            />
+            <img
+              src="https://nathanbweller.com/wp-content/uploads/2023/11/choeden-kal-980x560.jpg"
+              alt="Medium Image"
+            />
+            <img
+              src="https://nathanbweller.com/wp-content/uploads/2023/11/wot-age-of-legends-opening-bore-monsters-1-980x560.jpg"
+              alt="Medium Image"
+            />
 
-        <div class="gallery-item">
-          <img
-            src="https://nathanbweller.com/wp-content/uploads/2023/11/introduction-to-wot-age-of-legends-landscape-980x560.jpg"
-            alt="Large Image"
-          />
-          <img
-            src="https://nathanbweller.com/wp-content/uploads/2023/11/wot-introduction-featured-image-2-1280x732.jpg"
-            alt="Standard Image"
-          />
-          <img
-            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b19eaca-3d5b-429c-8725-0539d5300693/dbjldl6-acf6776f-81a4-40f8-aaf4-494a0beedf63.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzViMTllYWNhLTNkNWItNDI5Yy04NzI1LTA1MzlkNTMwMDY5M1wvZGJqbGRsNi1hY2Y2Nzc2Zi04MWE0LTQwZjgtYWFmNC00OTRhMGJlZWRmNjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.67fwaOSwcbakUPM8Y6yANpfZ3wGvkW9j3tk4A_qUeAs"
-            alt="Standard Image"
-          />
+            <img
+              src="https://i.pinimg.com/originals/17/19/b1/1719b1aeaba4b866d56678413e71f551.png"
+              alt="Standard Image"
+            />
+            <img
+              src="https://reactormag.com/wp-content/uploads/2016/08/WoK-wallpaper-800x600-740x555.jpg"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://preview.redd.it/played-around-with-wheel-of-time-in-midjourney-using-the-v0-x94yfnam83ra1.png?width=640&crop=smart&auto=webp&s=36fe7038fb51a78896396e4a5ec597f8ebae5513"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/5653e2db9bd854730a335e509206b091.webp?ci_seal=f062616d64&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://i.pinimg.com/originals/a4/38/a8/a438a887db8c0fcf3fbfa0f7933b1969.jpg"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/f8d8ce536e33c6207bfe08549a699a77.webp?ci_seal=e855ac176d&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/d671e7ba402f1b4755e93620578f5173.webp?ci_seal=f93f066f10&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/2db4fea5c970e4c6cb6506f904086555.webp?ci_seal=4eaf8ae76b&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/d8592287b1c50a9685737322e7d11a81.webp?ci_seal=a5f79ff3f8&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/08529d2cfd88e9e0404a51f1eb0fa30a.jpeg?ci_seal=65a0e6613d&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/a0aff4b8aad9e034410995c75f662951.webp?ci_seal=771c90490d&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/bb7571ee7eb98610a9bb90b88ded677a.webp?ci_seal=6dcd04e224&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/d18cbcac9530fa9cf16c4be38e89a4c4.webp?ci_seal=6f74d536ae&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/f553dbf9f14bf9aea845ffb64d5c75f3.webp?ci_seal=f779c28000&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+          </div>
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/5ac4838bafea36261f53df0ee830d2a6.jpeg?ci_seal=1bccbb8032&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+          <div class="gallery-item">
+            <img
+              src="https://nathanbweller.com/wp-content/uploads/2023/11/introduction-to-wot-age-of-legends-landscape-980x560.jpg"
+              alt="Large Image"
+            />
+            <img
+              src="https://nathanbweller.com/wp-content/uploads/2023/11/wot-introduction-featured-image-2-1280x732.jpg"
+              alt="Standard Image"
+            />
+            <img
+              src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b19eaca-3d5b-429c-8725-0539d5300693/dbjldl6-acf6776f-81a4-40f8-aaf4-494a0beedf63.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzViMTllYWNhLTNkNWItNDI5Yy04NzI1LTA1MzlkNTMwMDY5M1wvZGJqbGRsNi1hY2Y2Nzc2Zi04MWE0LTQwZjgtYWFmNC00OTRhMGJlZWRmNjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.67fwaOSwcbakUPM8Y6yANpfZ3wGvkW9j3tk4A_qUeAs"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/30967b5ffba71cae2b34e2247865bf7a.webp?ci_seal=206c98cd7b&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
-        </div>
+            <img
+              src="https://preview.redd.it/played-around-with-wheel-of-time-in-midjourney-using-the-v0-x94yfnam83ra1.png?width=640&crop=smart&auto=webp&s=36fe7038fb51a78896396e4a5ec597f8ebae5513"
+              alt="Standard Image"
+            />
 
-        <div class="gallery-item">
-          <img
-            src="https://64.media.tumblr.com/444f84a37f4e97d7d19ac89bb0ca29cd/tumblr_p78n0fal2T1tqgexdo1_1280.jpg"
-            alt="Standard Image"
-          />
-          <img
-            src="https://nathanbweller.com/wp-content/uploads/2020/01/wheel-of-time-map-980x767.jpg"
-            alt="Standard Image"
-          />
-          <img
-            src="https://reactormag.com/wp-content/uploads/2015/06/WordsofRadiance_new_1920x1080.jpg"
-            alt="Standard Image"
-          />
+            <img
+              src="https://i.pinimg.com/originals/a4/38/a8/a438a887db8c0fcf3fbfa0f7933b1969.jpg"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://www.michaelwhelan.com/wp-content/uploads/shallan.jpg"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/d671e7ba402f1b4755e93620578f5173.webp?ci_seal=f93f066f10&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://www.17thshard.com/uploads/monthly_2018_06/large.Kaladin.jpg.047af449ee8869535fdcea61817de5bb.jpg"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/d8592287b1c50a9685737322e7d11a81.webp?ci_seal=a5f79ff3f8&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/8c29e92642d21fae36a87f897c850521.webp?ci_seal=b5f9c569cc&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/a0aff4b8aad9e034410995c75f662951.webp?ci_seal=771c90490d&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/0879cf4f00534ca15109b5e582c6ecb7.webp?ci_seal=8fe35a9fb3&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/d18cbcac9530fa9cf16c4be38e89a4c4.webp?ci_seal=6f74d536ae&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/3977ca08c9eb0a744c4e03a38974e453.jpeg?ci_seal=8facf024a9&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/5ac4838bafea36261f53df0ee830d2a6.jpeg?ci_seal=1bccbb8032&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/9961e831e2aa539fe864013d2b071d8b.webp?ci_seal=ffc8ef9682&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/30967b5ffba71cae2b34e2247865bf7a.webp?ci_seal=206c98cd7b&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+          </div>
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/a645a7c5b857cdd66cd004c40c9336df.jpeg?ci_seal=a4496d7afe&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+          <div class="gallery-item">
+            <img
+              src="https://64.media.tumblr.com/444f84a37f4e97d7d19ac89bb0ca29cd/tumblr_p78n0fal2T1tqgexdo1_1280.jpg"
+              alt="Standard Image"
+            />
+            <img
+              src="https://nathanbweller.com/wp-content/uploads/2020/01/wheel-of-time-map-980x767.jpg"
+              alt="Standard Image"
+            />
+            <img
+              src="https://reactormag.com/wp-content/uploads/2015/06/WordsofRadiance_new_1920x1080.jpg"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/fcf6a044310bda086343bebdc71cd1a2.webp?ci_seal=a459597fdf&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
+            <img
+              src="https://www.michaelwhelan.com/wp-content/uploads/shallan.jpg"
+              alt="Standard Image"
+            />
 
-          <img
-            src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/3088c9ebe18bcbb14fb6ca540fbb7233.webp?ci_seal=a698a20430&org_if_sml=1&q=85&w=1800"
-            alt="Standard Image"
-          />
-        </div>
+            <img
+              src="https://www.17thshard.com/uploads/monthly_2018_06/large.Kaladin.jpg.047af449ee8869535fdcea61817de5bb.jpg"
+              alt="Standard Image"
+            />
+
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/8c29e92642d21fae36a87f897c850521.webp?ci_seal=b5f9c569cc&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/0879cf4f00534ca15109b5e582c6ecb7.webp?ci_seal=8fe35a9fb3&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/3977ca08c9eb0a744c4e03a38974e453.jpeg?ci_seal=8facf024a9&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/9961e831e2aa539fe864013d2b071d8b.webp?ci_seal=ffc8ef9682&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/a645a7c5b857cdd66cd004c40c9336df.jpeg?ci_seal=a4496d7afe&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/fcf6a044310bda086343bebdc71cd1a2.webp?ci_seal=a459597fdf&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+
+            <img
+              src="https://images.robinpro.gallery/v7/_robin-pro_/uploads/3088c9ebe18bcbb14fb6ca540fbb7233.webp?ci_seal=a698a20430&org_if_sml=1&q=85&w=1800"
+              alt="Standard Image"
+            />
+          </div>
+        </section>
       </section>
     </main>
 
