@@ -1,36 +1,10 @@
+.upper_backgroud_glossary {
+  background-image: url('https://reactormag.com/wp-content/uploads/2015/06/WordsofRadianceText_1920x1080.jpg');
+}
 
 /* ================================================ */
 /*                      table                       */
 /* ================================================ */
-
-/* Table Styling */
-table {
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #fff; /* Cleaner white background */
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  overflow: hidden;
-}
-
-th, td {
-  padding: 16px 18px; /* Increased padding for better spacing */
-  text-align: center;
-  font-size: 16px; /* Larger font for readability */
-  font-family: 'Arial', sans-serif;
-  color: #444; /* Darker text color for better contrast */
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #e9ecef; /* Light gray-blue for headers */
-  color: #222; /* Stronger text contrast */
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em; /* Slight spacing for headers */
-}
 
 /* Unique styling for th-side-number */
 .th-side-number {
@@ -51,24 +25,73 @@ th {
   transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+/* Table Styling */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
 
-td {
-  background-color: #fdfdfd;
+th, td {
+  padding: 16px 18px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  color: #444;
+  border: 1px solid #ddd; /* Add borders for clear separation */
+}
+
+th {
+  background-color: #e9ecef;
+  color: #222;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* first col in the table will be darker */
+tr:first-child th {
+  background-color: #333;
+  color: #fff;
+}
+
+th:first-child, td:first-child {
+  border-left: none;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
 }
 
 tr:nth-child(even) td {
-  background-color: #f8f9fa; /* Subtle gray for alternating rows */
+  background-color: #f8f9fa;
 }
 
 tr:hover td {
-  background-color: #e6f7ff; /* Light blue highlight on hover */
+  background-color: #e6f7ff;
   color: #111;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-th:first-child,
-td:first-child {
-  border-left: none;
+/* Add the black line for header separation */
+tr:nth-child(2) th, tr:nth-child(3) td{
+  border-bottom: 2px solid #333; /* Strong black line */
+}
+
+/* Special case for left header spanning two rows */
+tr:nth-child(2) th:not([rowspan]) {
+  border-bottom: none; /* Remove the black line */
+}
+
+/* Adjusting Multi-line Cells */
+td {
+  line-height: 1.6; /* Increase line spacing for readability */
 }
 
 th:last-child,
@@ -76,20 +99,108 @@ td:last-child {
   border-right: none;
 }
 
+/* Style for the inner table */
+td:last-child .parts {
+  border-collapse: collapse; /* Remove spacing between inner table cells */
+  width: 100%; /* Ensure it fills the parent cell */
+  margin: 0; /* Remove spacing around the inner table */
+  padding: 0; /* Remove padding */
+  background: none; /* Match the background with the parent table */
+  box-shadow: none; /* Remove shadow to blend with the parent table */
+}
+
+/* Style the cells inside the inner table */
+td:last-child .parts td {
+  border: none; /* Remove borders to blend with the parent table */
+  padding: 4px; /* Match padding of outer table cells */
+  font-size: inherit; /* Match font size with the parent table */
+  line-height: inherit; /* Keep consistent line height */
+  text-align: inherit; /* Use inherited text alignment */
+  vertical-align:middle; /* Align content vertically */
+}
+
+td:last-child .parts tr + tr td {
+  border-top: 1px solid #ddd; /* Add a subtle separator between parts */
+}
+
+/* Hover effect for inner table cells */
+td:last-child .parts tr:hover td {
+  background-color: #ffffff; /* Light blue background on hover */
+  color: #222; /* Darker text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+
+
 /* Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
   th, td {
     font-size: 15px;
-    padding: 12px 14px;
+    padding: 12px 2px;
+  }
+  
+  .th-side-number {
+    width: 50px; /* Reduce width for better fit */
+  }
+
+  /* Adjust inner table cells (parts) to better fit small screens */
+  td:last-child .parts td {
+    padding: 3px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
   th, td {
     font-size: 14px;
-    padding: 10px 12px;
+    padding: 8px 2px;
+  }
+
+  .th-side-number {
+    width: 40px; /* Further reduce width for very small screens */
+  }
+
+  /* Adjust inner table cells (parts) to better fit small screens */
+  td:last-child .parts td {
+    padding: 2px;
+    font-size: 12px;
   }
 }
+
+/* ================================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ================================================ */
 /*                      details                     */ 
@@ -144,7 +255,7 @@ details:hover {
 details[open] {
   grid-column: span 2; /* Make the element span across all columns */
   grid-row: span 2; /* Occupy additional space */
-  width: 97%; /* Expand to full viewport width */
+  width: 100%; /* Expand to full viewport width */
   background-color: #f7f7f7; /* Highlight the opened details */
   z-index: 10; /* Bring it above other elements */
   position: relative;
@@ -154,6 +265,7 @@ details[open] {
 details summary {
   height: 250px; /* Fixed height for the image */
   width: 100%; /* Full width for the summary */
+  color: white;
   background-color: #248cfb; /* Fallback background color */
   background-image: var(--background-image); /* Use CSS variable for dynamic images */
   background-size: cover; /* Ensure the image covers the area */
@@ -164,22 +276,34 @@ details summary {
   position: relative; /* For layered content */
   display: block; /* Block layout for header */
   overflow: hidden; /* Clip overflowing content */
+  text-shadow: 0 0 5px rgb(113, 165, 255); /* Add shadow for better contrast */
+
 }
 
 /* Ensure links are visible */
 details a {
-  color: #00aaff; /* Adjust color for better visibility */
+  color: #0000EE; /* Standard link blue */
   text-decoration: underline; /* Highlight links */
   position: relative; /* Ensure links are layered properly */
   z-index: 3; /* Place above the overlay */
-  font-weight: bold;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: normal; /* Matches typical browser link styling */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
 }
 
-/* Add hover effects for links */
+/* Hover Effect */
 details a:hover {
-  color: #ff6600; /* Brighter hover color */
-  text-shadow: 0 0 5px rgba(255, 102, 0, 0.8); /* Glow effect */
+  color: #551A8B; /* Dark purple for hover */
+  text-shadow: none; /* Keep it clean */
+}
+
+/* Visited Links */
+details a:visited {
+  color: #800080; /* Deep purple for visited links */
+}
+
+/* Active Links (on click) */
+details a:active {
+  color: #FF0000; /* Red for active links */
 }
 
 /* Ensure links inside details remain interactive */

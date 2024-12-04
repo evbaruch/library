@@ -1,153 +1,179 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* ======================================== */
+/*                  General                 */
+/* ======================================== */
+
+html, body {
+  height: 100%;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
+/* General */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set global font */
+  line-height: 1.6; /* Improve readability */
+  display: flex; /* Enable Flexbox for the layout */
+  flex-direction: column; /* Arrange elements in a vertical column */
+  min-height: 100vh; /* Make the body span the full viewport height */
 }
+
+/* Header */
+header {
+  background-color: #333; /* Set a dark background color */
+  color: #fff; /* Use white text for contrast */
+  padding: 10px 0; /* Add vertical padding */
+}
+
+/* ======================================== */
+/*                  Footer                  */
+/* ======================================== */
+
+footer {
+  background-color: #333; /* Dark background for the footer */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center-align footer text */
+  padding: 10px 0; /* Add padding for better appearance */
+  font-size: 0.9em; /* Slightly smaller font for footer text */
+  margin-top: auto; /* Push the footer to the bottom of the page */
+  position: relative; /* Ensure the footer stays below content */
+}
+
+/* Add some styling for links in the footer */
+footer a {
+  color: #fff; /* Set link text color to white */
+  text-decoration: underline; /* Add underline to links */
+}
+
+footer a:hover {
+  color: #ccc; /* Change link color on hover */
+}
+
+/* ======================================== */
+/*                  Navbar                  */
+/* ======================================== */
 
 .navbar {
-  display: flex;
-  justify-content: center;
+  display: flex; /* Use flexbox layout for navigation items */
+  justify-content: center; /* Center-align navigation items */
   list-style: none; /* Remove default list styling */
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 .navbar li {
-  margin: 0 15px;
+  margin: 0 15px; /* Add horizontal spacing between items */
 }
 
 .navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+  color: white; /* Set link text color to white */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Make links bold */
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links on hover */
 }
 
-/* Main Content */
+/* ======================================== */
+/*               Main Content               */
+/* ======================================== */
+
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  flex: 1; /* Allow the main content to expand and fill available space */
+  display: flex; /* Optional: add layout for main */
+  flex-direction: column; /* Stack items in the main section */
 }
+
+/* ======================================== */
+/*        Upper Background Image            */
+/* ======================================== */
 
 .upper_backgroud {
   background-size: cover; /* Ensure the image covers the entire section */
   background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent tiling */
-  background-color: rgba(255, 255, 255, 0.7); /* White overlay with 80% opacity */
-  background-blend-mode: lighten; /* Blend image with overlay */
+  background-repeat: no-repeat; /* Prevent the background from tiling */
+  background-color: rgba(255, 255, 255, 0.7); /* Add a white overlay with 70% opacity */
+  background-blend-mode: lighten; /* Blend the overlay with the image */
 }
 
-.upper_backgroud_home {
-  background-image: url('https://i.etsystatic.com/16895790/r/il/a289d9/4841007885/il_794xN.4841007885_potp.jpg');
-}
-
-.upper_backgroud_glossary {
-  background-image: url('https://reactormag.com/wp-content/uploads/2015/06/WordsofRadianceText_1920x1080.jpg');
-}
-
+/* ======================================== */
+/*                Description               */
+/* ======================================== */
 
 .description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange elements in a column */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center-align text */
+  padding: 20px; /* Add padding around the content */
 }
 
 .description h1 {
-  font-size: 3em;
+  font-size: 3em; /* Set the font size for the main heading */
 }
 
 .description p {
-  font-size: 1.6em;
-  color: #000;
+  font-size: 1.6em; /* Set the font size for the paragraph */
+  color: #000; /* Use black text color */
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  margin-top: auto;
+/* ======================================== */
+/*                  Home                    */
+/* ======================================== */
+
+.upper_backgroud_home {
+  background-image: url('https://i.etsystatic.com/16895790/r/il/a289d9/4841007885/il_794xN.4841007885_potp.jpg'); /* Set a specific background image */
 }
 
-/* Data section */
+/* ======================================== */
+/*               Data Section               */
+/* ======================================== */
+
 .data {
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
+  background-color: #fff; /* Set a white background */
+  padding: 20px; /* Add padding around the content */
+  text-align: center; /* Center-align the text */
 }
 
 .data h2 {
-  margin-bottom: 20px;
-  font-size: 2em;
+  margin-bottom: 20px; /* Add space below the heading */
+  font-size: 2em; /* Set the font size for the heading */
 }
 
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  justify-items: center;
-  padding: 20px;
-}
+/* ======================================== */
+/*                   Box                    */
+/* ======================================== */
 
 .box {
-  width: 100%;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  width: 100%; /* Set the width to fill the container */
+  margin: 5px; /* Add margin around the box */
+  border: 1px solid #ccc; /* Add a light gray border */
+  border-radius: 8px; /* Round the corners */
+  padding: 10px; /* Add padding inside the box */
+  background-color: #f9f9f9; /* Use a light gray background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  text-align: center; /* Center-align the content */
   overflow: hidden; /* Ensure content stays within the box */
 }
 
+.box .box-header {
+  display: flex; /* Use flexbox layout for the header */
+}
+
 .box-small {
-  max-width: 280px;
+  max-width: 280px; /* Limit the width of small boxes */
 }
 
-.box-big {
-  grid-column: span 2; /* Spans 2 columns in the grid */
-  width: 100%; /* Ensures it uses the full available width */
-  height: auto; /* Allow the height to grow based on content */
-  padding: 20px;
-  box-sizing: border-box; /* Include padding in the element's total width/height */
-}
-
-/* For normal images */
 .box img {
-  width: 100%; /* Ensure the image fits the box's width */
-  max-height: 200px; /* Limit height for normal images */
-  object-fit: cover; /* Maintain aspect ratio */
-  border-radius: 5px; /* Consistent styling */
-}
-
-/* For unique images on the "series" page */
-.box-big img {
-  width: 100%; /* Utilize the full width */
-  height: auto; /* Keep aspect ratio intact */
-  object-fit: contain; /* Show the whole image */
+  width: 130px; /* Set the image width */
+  height: auto; /* Maintain aspect ratio */
+  height: 200px; /* Set the image height */
+  object-fit: cover; /* Crop the image to fit the box */
+  border-radius: 5px; /* Round the corners */
 }
 
 .box-info {
-  padding: 10px; /* Add some spacing around the text */
+  padding: 10px; /* Add spacing around the text */
   word-wrap: break-word; /* Allow long words to break into the next line */
 }
 
@@ -158,502 +184,356 @@ footer {
   white-space: nowrap; /* Prevent text wrapping for single-line elements */
 }
 
-.box-big .box-info {
-  white-space: normal; /* Allow multi-line text in big boxes */
-}
-
-.box-big .box-info p {
-  text-overflow: clip; /* Show full text for unique images */
-}
-
 .box-info .author {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #333;
+  font-size: 1.1em; /* Set the font size for author names */
+  font-weight: bold; /* Make author names bold */
+  color: #333; /* Use dark gray text color */
 }
 
 .box-info .genre {
-  font-size: 0.9em;
-  color: #555;
+  font-size: 0.9em; /* Set the font size for genres */
+  color: #555; /* Use a lighter gray text color */
 }
 
-/* Ensure hidden-content is not displayed in .box-big */
-.box-big .hidden-content {
-  display: none;
+/* ======================================== */
+/*                 Art Gallery              */
+/* ======================================== */
+
+.art_gallery {
+  display: flex; /* Use flexbox layout for gallery items */
+  justify-content: space-around; /* Space items evenly horizontally */
+  padding: 10px; /* Add padding around the container */
+  gap: 15px; /* Add space between the gallery items */
+  margin-bottom:inherit; /* Add space between the gallery and footer */
+  height: auto; /* Let the gallery's height adapt to its content */
+  overflow: visible; /* Prevent content from spilling out */
 }
 
-/* Responsive Design */
-@media (max-width: 440px) {
-  .books-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .book {
-    max-width: 90%;
-  }
-
-  .box-big {
-    grid-column: span 1; /* Reverts to a single column on smaller screens */
-  }
+.gallery-item {
+  display: flex; /* Use flexbox layout for images */
+  flex-direction: column; /* Stack images vertically */
+  width: calc(33.33% - 15px); /* 3 items per row with spacing */
+  justify-content: space-around; /* Space out images vertically */
+  align-items: center; /* Center-align images horizontally */
 }
 
-
-/* Table Styling */
-table {
-  width: 90%; /* Center the table and make it responsive */
-  border-collapse: separate;
-  border-spacing: 0; /* Remove gaps between cells */
-  margin: 20px auto;
-  background-color: #fdfdfd;
-  border: 1px solid #ddd;
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Strong shadow for emphasis */
-  overflow: hidden;
+.gallery-item img {
+  width: 100%; /* Make images fill the container width */
+  height: 100%; /* Make images fill the container height */
+  object-fit: cover; /* Ensure the image fills the container */
+  border-radius: 8px; /* Round the corners */
+  margin: 5px 0; /* Add vertical spacing around images */
 }
 
-th, td {
-  border-bottom: 1px solid #ddd; /* Horizontal lines */
-  padding: 14px 16px;
-  text-align: center;
-  font-size: 15px;
-  font-family: 'Arial', sans-serif;
-  color: #555; /* Softer text color for contrast */
+/* ======================================== */
+/*                 Video Gallery            */
+/* ======================================== */
+
+.video-gallery {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Even spacing between items */
+  padding: 10px;
+  gap: 15px; /* Space between videos */
+  margin-top: 20px;
 }
 
-th {
-  background-color: #f0f0f0; /* Light gray for headers */
-  color: #333;
-  font-weight: 600;
-  text-transform: uppercase; /* Consistent header styling */
-}
-
-td {
-  background-color: #fff; /* Clean white cells */
-}
-
-tr:nth-child(even) td {
-  background-color: #f7f7f7; /* Alternating row color */
-}
-
-tr:hover td {
-  background-color: #f0fbff; /* Highlight on hover */
-  color: #222; /* Slightly darker text */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-}
-
-th:first-child,
-td:first-child {
-  border-left: 1px solid #ddd; /* Stronger left border for the first column */
-}
-
-th:last-child,
-td:last-child {
-  border-right: 1px solid #ddd; /* Stronger right border for the last column */
-}
-
-/* Mobile-Friendly Styling */
-@media (max-width: 768px) {
-  th, td {
-    font-size: 14px;
-    padding: 12px 10px; /* Reduced padding */
-  }
-}
-
-@media (max-width: 480px) {
-  th, td {
-    font-size: 13px;
-    padding: 10px 8px;
-  }
-}
-
-/* ================================================ */
-/*                      details                     */ 
-/* ================================================ */
-
-/* Grid Layout for Details */
-.details-grid {
-  display: grid;
-  gap: 20px; /* Space between items */
-  grid-template-columns: repeat(auto-fit, 45%); /* Dynamic columns for responsiveness */
-  justify-content: space-around;
-  padding: 20px;
-}
-
-/* Inner Grid for Expanded Details */
-.details-grid-in {
-  display: grid;
-  gap: 20px 60px; /* Space between items */
-  grid-template-columns: repeat(auto-fit, minmax(20%, 20%)); /* Adjusted for images and content */
-  justify-content: space-around;
-  padding: 20px;
-}
-
-/* Details Styling */
-details {
-  cursor: pointer; /* Pointer cursor for interactivity */
-  width: 100%; /* Default width for details in the grid */
-  border: 1px solid #ddd; /* Subtle border */
+.video-item {
+  width: calc(50% - 15px); /* Two videos per row */
+  aspect-ratio: 16/9; /* Maintain YouTube video aspect ratio */
   border-radius: 8px; /* Rounded corners */
-  padding: 0; /* Remove padding to fit the image */
-  background-color: #ffffff; /* Clean white background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  overflow: hidden; /* Ensure content fits nicely */
-  transition: all 0.3s ease; /* Smooth hover and expand effects */
-  grid-column: span 1; /* Default to single-column span */
-  position: relative; /* For positioning the image overlay */
+  overflow: hidden; /* Clip content to match the border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+}
+
+.video-item iframe {
+  width: 100%; /* Make iframe fill the container */
+  height: 100%; /* Maintain aspect ratio */
+  border: none; /* Remove border around iframe */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-item {
+    width: 100%; /* Single video per row on smaller screens */
+  }
 }
 
 
 
-/* Center content inside details */
-details > * {
-  margin: 0;
+/* ======================================== */
+/*            TODO: DELETE SECTION          */
+/* ======================================== */
+
+.grid {
+  display: grid; /* Use grid layout for the section */
+  gap: 20px; /* Add space between grid items */
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); /* Define responsive columns */
+  justify-items: center; /* Center-align grid items */
+  padding: 20px; /* Add padding around the grid */
 }
 
-details:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Elevate on hover */
-  transform: translateY(-4px); /* Slight upward movement */
-}
 
-/* Expanded Details */
-details[open] {
-  grid-column: span 2; /* Make the element span across all columns */
-  grid-row: span 2; /* Occupy additional space */
-  width: 97%; /* Expand to full viewport width */
-  background-color: #f7f7f7; /* Highlight the opened details */
-  z-index: 10; /* Bring it above other elements */
+
+/* ======================================== */
+/*                Slideshow                 */
+/* ======================================== */
+/* Slider Styles */
+.slider {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
   position: relative;
 }
 
-/* Make summary fit an image and remain at the top */
-details summary {
-  height: 250px; /* Fixed height for the image */
-  width: 100%; /* Full width for the summary */
-  background-color: #248cfb; /* Fallback background color */
-  background-image: var(--background-image); /* Use CSS variable for dynamic images */
-  background-size: cover; /* Ensure the image covers the area */
-  background-position: center; /* Center the image */
-  border: none; /* Remove default border */
-  cursor: pointer; /* Pointer to indicate interactivity */
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
-  position: relative; /* For layered content */
-  display: block; /* Block layout for header */
-  overflow: hidden; /* Clip overflowing content */
+#slider input[type=radio] {
+  display: none;
 }
 
-/* Ensure links are visible */
-details a {
-  color: #00aaff; /* Adjust color for better visibility */
-  text-decoration: underline; /* Highlight links */
-  position: relative; /* Ensure links are layered properly */
-  z-index: 3; /* Place above the overlay */
-  font-weight: bold;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+#slider label {
+  cursor: pointer;
+  text-decoration: none;
 }
 
-/* Add hover effects for links */
-details a:hover {
-  color: #ff6600; /* Brighter hover color */
-  text-shadow: 0 0 5px rgba(255, 102, 0, 0.8); /* Glow effect */
+#overflow {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Ensure links inside details remain interactive */
-details[open] a {
-  pointer-events: auto; /* Ensure links are clickable */
-  z-index: 4; /* Stay above open content */
+#slides .inner {
+  display: flex;
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  width: 100%; /* Adjust width to fit the number of slides */
+  height: 400px;
 }
 
-/* Sticky summary on expand */
-details[open] summary {
-  position: sticky;
-  top: 0;
-  z-index: 5; /* Ensure it remains on top */
+#slides .slide {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 32%;  /* Default width for regular screen */
+  height: 100%;
+  color: #fff;
 }
 
-/* Add a semi-transparent overlay for text contrast */
-details summary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Slide transitions for default screen size */
+#slide1:checked ~ #slides .inner {
+  margin-left: 0%;
+}
+
+#slide2:checked ~ #slides .inner {
+  margin-left: -40%;
+}
+
+#slide3:checked ~ #slides .inner {
+  margin-left: -80%;
+}
+
+#slide4:checked ~ #slides .inner {
+  margin-left: -160%;
+}
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+  #slides .slide {
+    width: 100%;  /* Make each slide take full width on small screens */
+  }
+
+  /* Slide transitions for small screens */
+  #slide1:checked ~ #slides .inner {
+    margin-left: 0%;
+  }
+
+  #slide2:checked ~ #slides .inner {
+    margin-left: -100%; /* Full width for each slide */
+  }
+
+  #slide3:checked ~ #slides .inner {
+    margin-left: -200%; /* Full width for each slide */
+  }
+
+  #slide4:checked ~ #slides .inner {
+    margin-left: -300%; /* Full width for each slide */
+  }
+}
+
+/* Medium screens (600px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #slides .slide {
+    width: 50%;  /* Two slides per row */
+  }
+
+  /* Slide transitions for medium screens */
+  #slide1:checked ~ #slides .inner {
+    margin-left: 0%;
+  }
+
+  #slide2:checked ~ #slides .inner {
+    margin-left: -50%; /* Half width for each slide */
+  }
+
+  #slide3:checked ~ #slides .inner {
+    margin-left: -100%; /* Half width for each slide */
+  }
+
+  #slide4:checked ~ #slides .inner {
+    margin-left: -150%; /* Half width for each slide */
+  }
+}
+
+/* Large screens (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  #slides .slide {
+    width: 25%;  /* Four slides per row */
+  }
+
+  /* Slide transitions for large screens */
+  #slide1:checked ~ #slides .inner {
+    margin-left: 0%;
+  }
+
+  #slide2:checked ~ #slides .inner {
+    margin-left: -25%; /* One-quarter width for each slide */
+  }
+
+  #slide3:checked ~ #slides .inner {
+    margin-left: -50%; /* One-quarter width for each slide */
+  }
+
+  #slide4:checked ~ #slides .inner {
+    margin-left: -75%; /* One-quarter width for each slide */
+  }
+}
+
+/* Extra-large screens (1441px and up) */
+@media (min-width: 1441px) {
+  #slides .slide {
+    width: 20%;  /* Five slides per row */
+  }
+
+  /* Slide transitions for extra-large screens */
+  #slide1:checked ~ #slides .inner {
+    margin-left: 0%;
+  }
+
+  #slide2:checked ~ #slides .inner {
+    margin-left: -20%; /* One-fifth width for each slide */
+  }
+
+  #slide3:checked ~ #slides .inner {
+    margin-left: -40%; /* One-fifth width for each slide */
+  }
+
+  #slide4:checked ~ #slides .inner {
+    margin-left: -60%; /* One-fifth width for each slide */
+  }
+}
+
+
+
+
+#slides .slide {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+#slides .slide img {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
-  z-index: 1; /* Place behind the text */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-/* Ensure text stays visible above the overlay */
-details summary span {
-  position: relative;
-  z-index: 2; /* Place above the overlay */
-  color: #fff; /* White text for readability */
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 10px;
-}
-
-/* On hover, make the image more prominent */
-details summary:hover::before {
-  background-color: rgba(0, 0, 0, 0.2); /* Reduce overlay darkness */
-}
-
-/* Inner Content */
-details div {
-  font-size: 1em;
-  color: #555; /* Subtle text color for body content */
-  line-height: 1.5;
-  padding: 20px; /* Add padding to content */
-  margin-top: 10px; /* Space between the image and content */
-}
-
-/* Headers for Groups (e.g., A, B) */
-.details-header {
-  grid-column: 1 / -1; /* Spans all columns of the grid */
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #444;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-/* Fix for Medium to Large Screens (770px to 1060px) */
-@media screen and (min-width: 770px) and (max-width: 1060px) {
-  .details-grid {
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Allow up to three columns */
-    justify-content: center;
-    gap: 20px; /* Maintain consistent spacing */
-    grid-auto-rows: min-content; /* Adjust row heights based on content */
-  }
-
-  .details-header {
-    grid-column: 1 / -1; /* Span all columns */
-  }
-
-  .details-grid-in {
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Allow up to three columns */
-    justify-content: center;
-    gap: 20px; /* Maintain consistent spacing */
-    grid-auto-rows: min-content; /* Adjust row heights */
-  }
-
-  details[open] {
-    width: 100%; /* Full width within its grid column */
-    grid-column: span 3; /* Span three columns when opened */
-    grid-row: auto; /* Adjust row placement naturally */
-    justify-self: center; /* Center within the grid */
-  }
-
-  details summary {
-    height: 250px; /* Adjust height for medium to large screens */
-    overflow-wrap: break-word; /* Prevent text overflow */
-  }
-
-  details div {
-    font-size: 1.1em; /* Slightly larger font size for readability */
-    padding: 20px; /* Adjust padding */
-  }
-}
-
-
-/* Fix for Small to Medium Screens (440px to 770px) */
-@media screen and (min-width: 440px) and (max-width: 770px) {
-  .details-grid {
-    grid-template-columns: repeat(2, 1fr); /* Force two fixed columns */
-    gap: 20px; /* Maintain consistent spacing */
-    grid-auto-rows: min-content; /* Adjust row heights based on content */
-    position: relative; /* Ensure proper stacking context */
-  }
-
-  .details-header {
-    grid-column: 1 / -1; /* Span all columns for the header */
-    z-index: 1; /* Ensure it remains on top */
-  }
-
-  .details-grid-in {
-    grid-template-columns: repeat(2, 1fr); /* Ensure the inner grid also uses two columns */
-    gap: 20px;
-    grid-auto-rows: min-content;
-  }
-
-  details[open] {
-    grid-column: 1 / -1; /* Force the opened details to span all columns */
-    width: 100%; /* Full width to avoid overflow */
-    grid-row: auto; /* Let it naturally adjust rows */
-    justify-self: stretch; /* Align to fill available space */
-    z-index: 2; /* Bring it to the top of the layout */
-  }
-
-  details summary {
-    height: 200px; /* Adjust for small to medium screens */
-    overflow-wrap: break-word; /* Prevent text overflow */
-  }
-
-  details div {
-    font-size: 1em; /* Standard font size */
-    padding: 15px; /* Adjust padding for this range */
-    background-color: white; /* Optional: to enhance clarity */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: for better focus when expanded */
-  }
-}
-
-
-
-/* Fix for Smaller Screens (440px and below) */
-@media screen and (max-width: 440px) {
-  .details-grid {
-    grid-template-columns: 1fr; /* Single column for small screens */
-    justify-content: center;
-  }
-
-  .details-header {
-    grid-column: 1; /* Explicitly define header spans one column */
-  }
-
-  .details-grid-in {
-    grid-template-columns: 1fr; /* Single column for inner grid */
-    justify-content: center;
-    grid-auto-rows: min-content; /* Adjust row heights for content */
-  }
-
-  details[open] {
-    width: 100%; /* Take up full width within the column */
-    grid-column: 1; /* Ensure it stays within one column */
-    grid-row: auto; /* Let it determine its own row placement */
-    justify-self: center; /* Center within the grid */
-  }
-
-  details summary {
-    height: 180px; /* Adjust height for small screens */
-    overflow-wrap: break-word; /* Prevent text overflow */
-  }
-
-  details div {
-    font-size: 0.9em; /* Slightly reduce font size for readability */
-    padding: 10px; /* Adjust padding */
-  }
-}
-
-
-/* ================================================ */
-
-
-
-
-
-  
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-header {
-  
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-}
-
-.data h2 {
-  margin-bottom: 20px;
-  font-size: 2em;
-}
-
-.description h1 {
-  font-size: 3em;
-}
-
-.description p {
-  font-size: 1.6em;
-  color: #000;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  margin-top: auto;
-}
-
-
-/* Data section */
-.data {
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-
-.box {
-  width: 100%;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.box .box-header {
-  display: flex;
-}
-
-.box-medium {
-  max-width: 800px;   
-}
-
-.toggle-checkbox {
-  display: none;
-}
-
-.hidden-content {
-  display: none;
-}
-
-/* Show hidden content when checkbox is checked */
-.toggle-checkbox:checked ~ .hidden-content {
-  display: block;
-  margin-top: 10px;
-}
-
-.box img {
-  width: 130px;
-  height: auto;
-  height: 200px;
   object-fit: cover;
-  border-radius: 5px;
+  max-width: 300%;
+  max-height: 100%;
+  border-radius: 10px;
 }
 
-.box .summary {
-  font-size: 1.3em;
-  color: #333;
+#controls {
+  margin: -180px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
 }
 
-.hidden-content .expansion {
-  font-size: 1.3em;
-  color: #333;
+#controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
 }
 
-.hidden-content .author {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #333;
+#controls label:hover {
+  opacity: 1;
 }
 
-.hidden-content .genre {
-  font-size: 0.9em;
-  color: #555;
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1)
+ {
+  background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat center;
+  background-size: 30px 30px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
-.box-medium:hover {
-  background-color: #f0eded;
+#slide1:checked ~ #controls label:nth-last-child(5),
+#slide2:checked ~ #controls label:nth-last-child(8),
+#slide3:checked ~ #controls label:nth-last-child(7),
+#slide4:checked ~ #controls label:nth-last-child(6) {
+  background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat center;
+  background-size: 30px 30px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#bullets {
+  margin: 150px 0 0;
+  text-align: center;
+}
+
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4),
+#slide5:checked ~ #bullets label:nth-child(5),
+#slide6:checked ~ #bullets label:nth-child(6),
+#slide7:checked ~ #bullets label:nth-child(7),
+#slide8:checked ~ #bullets label:nth-child(8){
+  background: #000000;
+}
+
+/* Responsive fixes */
+@media screen and (max-width: 15000px) {
+  #slides {
+    max-width: calc(100% - 140px);
+    margin: 0 auto;
+  }
 }
