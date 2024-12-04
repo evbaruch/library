@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================== */
+/*                Art Gallery               */
+/* ======================================== */
+
+/* Flex container */
+.art_gallery {
+  display: flex;
+  justify-content: space-between; /* Align items horizontally */
+  height: 100vh;                  /* Fill the height of the viewport */
+  padding: 10px;                  /* Add some padding around the container */
+  gap: 15px;                      /* Space between the gallery items */
+}
+
+/* Flex items */
+.gallery-item {
+  display: flex;                  /* Arrange images in a column */
+  flex-direction: column;         /* Stack the images vertically within each item */
+  width: 30%;                     /* Ensure each gallery item takes up 30% of the container */
+  justify-content:space-around;  /* Align items at the top of the container */
+  align-items: center;            /* Center items horizontally */
+}
+
+.gallery-item img {
+  width: 100%;             /* Ensure images take full width of their container */
+  height: 100%;            /* Ensure images take full height of their container */
+  object-fit:fill;         /* Fill the container with the image */
+  border-radius: 8px;      /* Optional: rounded corners */
+  margin: 20px 0;          /* Add some space around the images */
+}
+
+/* Optional: to make images responsive */
+@media (max-width: 768px) {
+  .gallery-item {
+    height: 200px;  /* Adjust the height for smaller screens */
+  }
+}
+
+
+/* ======================================== */
