@@ -6,7 +6,9 @@ html, body {
   height: 100%;
 }
 
-/* General */
+
+/* top right bottom left */
+
 body {
   margin: 0; /* Remove default margin */
   font-family: 'Open Sans', sans-serif; /* Set global font */
@@ -29,7 +31,7 @@ p {
 header {
   background-color: #333; /* Set a dark background color */
   color: #fff; /* Use white text for contrast */
-  padding: 10px 0; /* Add vertical padding */
+  padding: 10px; /* Add vertical padding */
 }
 
 /* ======================================== */
@@ -40,7 +42,7 @@ footer {
   background-color: #333; /* Dark background for the footer */
   color: white; /* White text for contrast */
   text-align: center; /* Center-align footer text */
-  padding: 10px 0; /* Add padding for better appearance */
+  padding: 10px; /* Add padding for better appearance */
   font-size: 0.9em; /* Slightly smaller font for footer text */
   margin-top: auto; /* Push the footer to the bottom of the page */
   position: relative; /* Ensure the footer stays below content */
@@ -119,13 +121,10 @@ footer a:hover {
   color: #000; /* Use black text color */
 }
 
-/* ======================================== */
-/*                  Home                    */
-/* ======================================== */
+/* =============================================== */
+/*                       Home                      */
+/* =============================================== */
 
-.upper_backgroud_home {
-  background-image: url('https://i.etsystatic.com/16895790/r/il/a289d9/4841007885/il_794xN.4841007885_potp.jpg'); /* Set a specific background image */
-}
 
 /* ======================================== */
 /*               Data Section               */
@@ -170,6 +169,7 @@ footer a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
   transform: translateY(-5px); /* Move the box up slightly */
 }
+
 .box img {
   width: 130px; /* Set the image width */
   height: auto; /* Maintain aspect ratio */
