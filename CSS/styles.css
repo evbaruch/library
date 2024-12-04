@@ -9,12 +9,21 @@ html, body {
 /* General */
 body {
   margin: 0; /* Remove default margin */
-  font-family: Arial, sans-serif; /* Set global font */
+  font-family: 'Open Sans', sans-serif; /* Set global font */
   line-height: 1.6; /* Improve readability */
   display: flex; /* Enable Flexbox for the layout */
   flex-direction: column; /* Arrange elements in a vertical column */
   min-height: 100vh; /* Make the body span the full viewport height */
 }
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif; /* Apply Roboto to headings */
+}
+
+p {
+  font-family: 'Spectral SC', serif; /* Apply Spectral SC to paragraphs */
+}
+
 
 /* Header */
 header {
@@ -157,6 +166,10 @@ footer a:hover {
   max-width: 280px; /* Limit the width of small boxes */
 }
 
+.box-small:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+  transform: translateY(-5px); /* Move the box up slightly */
+}
 .box img {
   width: 130px; /* Set the image width */
   height: auto; /* Maintain aspect ratio */
@@ -409,9 +422,6 @@ footer a:hover {
     margin-left: -60%; /* One-fifth width for each slide */
   }
 }
-
-
-
 
 #slides .slide {
   flex: 1 0 auto;
