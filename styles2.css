@@ -8,12 +8,35 @@
     min-height: 100vh;
   }
   
-  header {
-    
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-  }
+
+  
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
 
   .data h2 {
     margin-bottom: 20px;
@@ -46,6 +69,35 @@
     text-align: center;
   }
 
+  .upper_backgroud {
+    background-image: var(--background-image);
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-color: rgba(255, 255, 255, 0.7); /* White overlay with 80% opacity */
+    background-blend-mode: lighten; /* Blend image with overlay */
+    background-position: top center;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .description h1 {
+    font-size: 3em;
+  }
+  
+  .description p {
+    font-size: 1.6em;
+    color: #000;
+  }
+  
+
   .grid {
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -75,7 +127,7 @@
 
 
   .box-details{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
   }
   
@@ -83,27 +135,36 @@
     max-width: 1000px;
     background-image: var(--background-image);
     background-blend-mode: lighten;
-    background-size: 200%;
-    background-position: center -220px;
-    background-color: rgba(255, 255, 255, 0.3);
-
+    background-size: 100%;
+    background-position: top center;
+    background-color: rgba(255, 255, 255, 0.4);
   }
 
-  .toggle-checkbox {
-    display: none;
+  .box-series {
+    max-width: 1000px;
+    min-height: 100px;
+    background-image: var(--background-image);
+    background-size: 100%;
+    background-position: center +10%;
   }
 
-.hidden-content {
-    display: none;
+
+
+  @media screen and (max-width: 600px) {
+    .box-medium {
+      max-width: 1000px;
+      background-image: var(--background-image);
+      background-blend-mode: lighten;
+      background-size: 200%;
+      background-position: top center;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
   }
 
-  /* Show hidden content when checkbox is checked */
-.toggle-checkbox:checked ~ .hidden-content {
-    display: block;
-    margin-top: 10px;
-}
+
+
   
-  .box img {
+  .box .box-header img {
     width: 130px;
     height: auto;
     height: 200px;
@@ -115,7 +176,7 @@
   .box .summary {
 
     color: white; /* Text color */
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adds shadow for readability */
     padding: 10px; /* Optional padding */
   }
@@ -139,5 +200,36 @@
 }
 
 .box-medium:hover {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.box-series:hover {
+  height: 100%;
+}
+
+
+.box-series {
+  position: relative;
+  max-width: 1000px; /* Set a fixed width for consistency */
+  height: 150px; /* Explicit height to match max-height */
+  overflow: hidden; /* Prevents content (like the image) from overflowing the box */
+  background-color:#333;
+}
+
+.box-series img {
+  width: 100%; /* Ensures the image scales proportionally to the container width */
+  height: 100%; /* Matches the height of the container */
+  object-fit: cover; /* Maintains aspect ratio and fills the container */
+  display: block; /* Removes inline spacing below the image */
+  border-radius: 8px;
+}
+
+.box-series .series {
+  position: absolute;
+  bottom: 10px; /* Adjust the position from the bottom of the image */
+  left: 10px; /* Adjust the position from the left side */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Add some padding */
+  font-size: 16px; /* Adjust font size as needed */
+  border-radius: 5px; /* Optional: add rounded corners */
 }
